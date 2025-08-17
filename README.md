@@ -49,7 +49,7 @@ systemctl status nginx
 Navigate to a temporary directory and **clone the repository**:  
 
 ```sh
-git clone https://github.com/pravinmishraaws/my-react-app.git
+git clone https://github.com/gus-hub-tech/my-react-app.git
 cd my-react-app
 ```
 
@@ -179,3 +179,6 @@ If successful, your **React app is live!**
 
 ## **Your React App is Now Live on Ubuntu with Nginx!**  
 Now your **React application** is deployed on an **Ubuntu VM with Nginx**, accessible from a **public IP**. 
+<img width="1000" height="450" alt="image" src="https://github.com/user-attachments/assets/8812e614-e6e9-48b5-90df-23e3352876b3" />
+
+
