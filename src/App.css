@@ -1,38 +1,320 @@
-.App {
+/* ===========================
+   APP.CSS - REACT APP STYLES
+   =========================== */
+
+/* ===========================
+   GLOBAL CONTAINER STYLES
+   =========================== */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===========================
+   HEADER STYLES
+   =========================== */
+.main-header {
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.welcome-title {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #7f8c8d;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+/* ===========================
+   DEPLOYMENT INFO SECTION
+   =========================== */
+.deployment-info {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 30px 0;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deployment-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+}
+
+.deployer-name {
+  margin: 0 0 15px 0;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.deployment-date {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.deployer-name strong,
+.deployment-date strong {
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   SECTION DIVIDER
+   =========================== */
+.section-divider {
+  margin: 40px 0;
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3498db,
+    #e74c3c,
+    #f39c12,
+    #3498db,
+    transparent
+  );
+  border-radius: 3px;
+}
+
+/* ===========================
+   RESOURCES SECTION
+   =========================== */
+.resources-section {
+  background: linear-gradient(45deg, #74b9ff, #0984e3);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(116, 185, 255, 0.3);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resources-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(116, 185, 255, 0.4);
+}
+
+.intro-text {
+  margin: 0 0 20px 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.links-container {
+  margin-top: 15px;
+}
+
+.resource-link {
+  margin: 0 0 15px 0;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.resource-link:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================
+   LINK STYLES
+   =========================== */
+.youtube-link,
+.linkedin-link {
+  color: #fdcb6e;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.youtube-link:hover,
+.linkedin-link:hover {
+  color: #ffffff;
+  border-bottom-color: #fdcb6e;
+  text-shadow: 0 0 8px rgba(253, 203, 110, 0.6);
+  transform: translateY(-1px);
+}
+
+.youtube-link:before {
+  content: "🎥 ";
+  margin-right: 5px;
+}
+
+.linkedin-link:before {
+  content: "💼 ";
+  margin-right: 5px;
+}
+
+/* ===========================
+   FOOTER STYLES
+   =========================== */
+.app-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(45deg, #2d3436, #636e72);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(45, 52, 54, 0.3);
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+  
+  .content-wrapper {
+    padding: 25px;
+  }
+  
+  .welcome-title {
+    font-size: 2em;
+  }
+  
+  .subtitle {
+    font-size: 1.1em;
+  }
+  
+  .deployer-name {
+    font-size: 1.2em;
+  }
+  
+  .deployment-info,
+  .resources-section {
+    padding: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 1.8em;
+  }
+  
+  .deployer-name {
+    font-size: 1.1em;
+  }
+  
+  .deployment-info,
+  .resources-section {
+    padding: 15px;
+  }
+  
+  .content-wrapper {
+    padding: 20px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* ===========================
+   ANIMATION EFFECTS
+   =========================== */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-wrapper {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.deployment-info,
+.resources-section {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* ===========================
+   ACCESSIBILITY IMPROVEMENTS
+   =========================== */
+.youtube-link:focus,
+.linkedin-link:focus {
+  outline: 3px solid #fdcb6e;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deployment-info:hover,
+  .resources-section:hover {
+    transform: none;
+  }
+  
+  .content-wrapper,
+  .deployment-info,
+  .resources-section {
+    animation: none;
+  }
+  
+  .youtube-link,
+  .linkedin-link {
+    transition: none;
+  }
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+  .app-container {
+    background: white;
+    padding: 0;
+  }
+  
+  .content-wrapper {
+    box-shadow: none;
+    background: white;
+  }
+  
+  .deployment-info,
+  .resources-section {
+    background: #f8f9fa !important;
+    color: #2c3e50 !important;
+    box-shadow: none;
   }
 }
