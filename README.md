@@ -180,3 +180,7 @@ If successful, your **React app is live!**
 
 ## **Your React App is Now Live on Ubuntu with Nginx!**  
 Now your **React application** is deployed on an **Ubuntu VM with Nginx**, accessible from a **public IP**. 
+
+## **React App Demo**  
+
+<video controls src="my-react-app-dev-demo.mp4" title="Title"></video>
