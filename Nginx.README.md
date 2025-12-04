@@ -14,32 +14,6 @@
 
 ---
 
-## 🔍 Understanding the Command
-
-The command you mentioned **creates or overwrites** this configuration file:
-
-```bash
-echo 'server {
-    listen 80;
-    server_name _;
-    root /var/www/html;
-    index index.html;
-    
-    location / {
-        try_files $uri /index.html;
-    }
-    error_page 404 /index.html;
-}' | sudo tee /etc/nginx/sites-available/default > /dev/null
-```
-
-### **What This Command Does:**
-1. **`echo '...'`** - Outputs the configuration text
-2. **`|`** - Pipes the output to the next command
-3. **`sudo tee`** - Writes to the file with root privileges
-4. **`/etc/nginx/sites-available/default`** - The target file location
-5. **`> /dev/null`** - Suppresses console output
-
----
 
 ## 📂 Nginx Directory Structure
 
