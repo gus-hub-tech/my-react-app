@@ -1,0 +1,437 @@
+/* ========================================
+   REACT DEPLOYMENT SIMULATOR STYLES
+   ======================================== */
+
+/* ========================================
+   GLOBAL RESET AND FONTS
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   MAIN SIMULATOR LAYOUT
+   ======================================== */
+.simulator-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.simulator-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* ========================================
+   SIMULATOR HEADER
+   ======================================== */
+.simulator-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.simulator-title {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+.simulator-subtitle {
+  color: #7f8c8d;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+/* ========================================
+   PROGRESS BAR SECTION
+   ======================================== */
+.progress-container {
+  margin-bottom: 30px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-label,
+.progress-count {
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00b894, #00cec9);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* ========================================
+   STEP CONTAINER
+   ======================================== */
+.step-container {
+  background: linear-gradient(45deg, #74b9ff, #0984e3);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(116, 185, 255, 0.3);
+}
+
+.step-title {
+  margin: 0 0 15px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.step-content {
+  margin-top: 15px;
+}
+
+.step-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* ========================================
+   CODE BLOCKS
+   ======================================== */
+.code-block {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: pre-line;
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   INPUT FIELDS
+   ======================================== */
+.input-container {
+  margin-top: 15px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.input-field::placeholder {
+  color: #7f8c8d;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.preview-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.preview-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   NAVIGATION SECTION
+   ======================================== */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.nav-button {
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.prev-button {
+  background: linear-gradient(45deg, #fd79a8, #e84393);
+  box-shadow: 0 5px 15px rgba(253, 121, 168, 0.4);
+}
+
+.next-button {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+}
+
+.nav-button:hover:not(.disabled) {
+  transform: translateY(-2px);
+}
+
+.nav-button.disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.nav-button.disabled:hover {
+  transform: none;
+}
+
+/* ========================================
+   STEP INDICATORS
+   ======================================== */
+.step-indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.step-dot.active {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  transform: scale(1.2);
+}
+
+.step-dot:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================
+   SIMULATOR FOOTER
+   ======================================== */
+.simulator-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(45deg, #2d3436, #636e72);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(45, 52, 54, 0.3);
+}
+
+.footer-content {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.footer-description {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* ========================================
+   PREVIEW STYLES
+   ======================================== */
+.preview-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.preview-content {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.preview-app {
+  margin-bottom: 30px;
+}
+
+.preview-title {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.preview-subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.preview-deployment-info {
+  margin: 30px 0;
+}
+
+.preview-deployer {
+  color: #4a5568;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.preview-date {
+  color: #718096;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.preview-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+  margin: 30px 0;
+}
+
+.preview-resources {
+  margin: 30px 0;
+}
+
+.preview-intro {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.preview-link {
+  color: #4a5568;
+  margin: 10px 0;
+}
+
+.preview-youtube-link,
+.preview-linkedin-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.preview-youtube-link:hover,
+.preview-linkedin-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.back-button {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .simulator-content {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .simulator-title {
+    font-size: 2rem;
+  }
+  
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .step-indicators {
+    order: -1;
+  }
+  
+  .preview-content {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .preview-title {
+    font-size: 2rem;
+  }
+}
